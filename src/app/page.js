@@ -7,7 +7,7 @@ import About from "@/Components/About";
 import Services from "@/Components/Services";
 import Team from "@/Components/Team";
 import { Clients } from "@/Components/Clients";
-import Animate from "@/Components/Animate";
+
 export default function Home() {
   return (
     <div>

@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col gap-4 text-3xl font-semibold max-[640px]:overflow-hidden'>
                         <Link href={'/'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform'>Home</Link>
-                        <Link href={'/about'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Portfolio</Link>
+                        <Link href={'/portfolio'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Portfolio</Link>
                         <Link href={'/services'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Services</Link>
                         <Link href={'/contact'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Contact</Link>
                     </div>
@@ -35,7 +35,7 @@ const Footer = () => {
 
                     <div className='flex flex-col gap-4 text-xl overflow-hidden'>
                         <Link href={'/'} className=' hover:translate-x-2 transition-all duration-300'>Privacy Policy</Link>
-                        <Link href={'/about'} className=' hover:translate-x-2 transition-all duration-300'>Terms and conditions</Link>
+                        <Link href={'/portfolio'} className=' hover:translate-x-2 transition-all duration-300'>Terms and conditions</Link>
                         <Link href={'/services'} className=' hover:translate-x-2 transition-all duration-300'>Cookie Policy</Link>
                         <Link href={'/contact'} className=' hover:translate-x-2 transition-all duration-300'>Careers</Link>
                     </div>

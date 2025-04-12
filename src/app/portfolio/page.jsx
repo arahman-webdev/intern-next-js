@@ -9,14 +9,14 @@ import project5 from '../images/Projects/interviewer-5.webp'
 import project6 from '../images/Projects/video-gift-3.webp'
 import Image from 'next/image';
 
-const AboutPage = () => {
+const Portfolio = () => {
     return (
         <div className='py-10'>
             <div>
 
             </div>
             <div>
-                <ul className="flex justify-center gap-2">
+                <ul className="flex justify-center gap-2 inline-block">
                     <li className="relative pl-4 font-semibold text-sm uppercase before:content-[''] before:absolute before:right-96 before:top-1/2 before:translate-y-[-50%] before:w-[100vw] before:h-[1px] before:bg-black/10">
                         <Link href="/">Home</Link>
                     </li>
@@ -27,8 +27,8 @@ const AboutPage = () => {
                         Portfolio
                     </li>
                 </ul>
-                <div className='lg:w-11/12 xl:w-10/12 mx-auto  w-full 2xl:px-24  px-4'>
-                    <h1 className='text-6xl font-medium'><span className='font-semibold'>Designing a <br /> Better</span> <span className='font-thin'>World Today</span></h1>
+                <div className='lg:w-11/12 xl:w-10/12 2xl:w-4/6 mx-auto  w-full 2xl:px-24 xl:px-16  px-4'>
+                    <h1 className='text-6xl font-medium leading-normal mt-5'><span className='font-semibold'>Designing a <br /> Better</span> <span className='font-thin'>World Today</span></h1>
                     <div className='py-16 inline-block'>
                         <Link href={'#work'} className='flex gap-5 items-center group'><span>Our Works</span><FaArrowDownLong className='bg-[#E5E5E5] p-3 rounded-full size-10 group-hover:scale-125 transition duration-300' /></Link>
                     </div>
@@ -42,12 +42,14 @@ const AboutPage = () => {
                                                 key={index}
                                                 src={project}
                                                 alt={`product-${project}`}
-                                                className='w-full h-full  transform group-hover:scale-125 transition duration-500 ease-in-out'
+                                                className={`w-full h-full  transform group-hover:scale-105 transition duration-500 ease-in-out
+                                                ${index === 1? ' h-[500px]': ''}
+                                                    `}
 
                                             />
 
                                         </div>
-                                        <div className='flex flex-col'>
+                                        <div className='flex flex-col space-y-6 mt-6'>
                                             <span><span className='text-amber-500'>Technology</span> November 14, 2023</span>
                                             <span>Interior design studio</span>
                                         </div>
@@ -62,4 +64,4 @@ const AboutPage = () => {
     );
 };
 
-export default AboutPage;
+export default Portfolio;
