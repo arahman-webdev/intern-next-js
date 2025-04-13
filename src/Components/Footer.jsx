@@ -24,7 +24,7 @@ const Footer = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-4 text-3xl font-semibold max-[640px]:overflow-hidden'>
+                    <div className='flex flex-col gap-4 text-3xl font-medium max-[640px]:overflow-hidden text-white'>
                         <Link href={'/'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform'>Home</Link>
                         <Link href={'/portfolio'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Portfolio</Link>
                         <Link href={'/services'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Services</Link>

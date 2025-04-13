@@ -66,6 +66,19 @@ html{
   }
 }
 
+.mil-lines-place {
+  @apply absolute left-0 top-0 z-[-1];
+}
+
+.mil-lines {
+  @apply w-[250px] h-auto opacity-50;
+}
+
+.mil-move {
+  @apply fill-black; /* Or any desired Tailwind color */
+}
+
+
 @layer base {
   * {
     @apply border-border;
@@ -74,3 +87,5 @@ html{
     @apply bg-background text-foreground;
   }
 }
+
+
