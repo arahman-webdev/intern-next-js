@@ -1,9 +1,11 @@
-import Image from 'next/image';
+'use client'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const Footer = () => {
+    const pathname = usePathname()
     return (
         <div className='bg-black text-[#AEAEAE] py-28'>
             <div className='md:w-4/6 w-full mx-auto'>
@@ -25,14 +27,12 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='flex flex-col gap-4 text-3xl font-medium max-[640px]:overflow-hidden text-white'>
-                        <Link href={'/'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform'>Home</Link>
-                        <Link href={'/portfolio'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Portfolio</Link>
+                        <Link href={'/'} className={`${pathname === '/' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'}hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}>Home</Link>
+                        <Link href={'/portfolio'} className={`${pathname === '/portfolio' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'}hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300`}>Portfolio</Link>
                         <Link href={'/services'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Services</Link>
                         <Link href={'/contact'} className='hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300'>Contact</Link>
                     </div>
-
-
-
+                    
                     <div className='flex flex-col gap-4 text-xl overflow-hidden'>
                         <Link href={'/'} className=' hover:translate-x-2 transition-all duration-300'>Privacy Policy</Link>
                         <Link href={'/portfolio'} className=' hover:translate-x-2 transition-all duration-300'>Terms and conditions</Link>

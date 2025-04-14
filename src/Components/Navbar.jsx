@@ -11,6 +11,9 @@ import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, Dr
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaCross } from "react-icons/fa6";
 
 
 const data = [
@@ -24,7 +27,7 @@ const data = [
 const Navbar = () => {
 
     const [isOpen, setIsopen] = useState(false)
-
+    const pathname = usePathname()
 
     return (
 
@@ -39,39 +42,62 @@ const Navbar = () => {
                             <Button variant="outline">{isOpen ? <IoMdClose /> : <HiBars3BottomLeft />}</Button>
                         </DrawerTrigger>
                     </div>
-                    <div className="">
-                        <DrawerContent className="h-screen  bg-gray-900 text-white">
-                            <div className="mx-auto w-full max-w-sm">
-                                <DrawerHeader>
-                                    <DrawerTitle>Move Goal</DrawerTitle>
-                                    <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-                                </DrawerHeader>
-                                <div className="p-4 pb-0">
-                                    <div className="flex items-center justify-center space-x-2">
 
-                                        <div className="flex-1 text-center">
-                                            <div className="text-7xl font-bold tracking-tighter">
-
-                                            </div>
-                                            <div className="text-[0.70rem] uppercase text-muted-foreground">
-                                                Calories/day
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div className="mt-3 h-[120px]">
-
-                                    </div>
-                                </div>
-                                <DrawerFooter>
-                                    <Button>Submit</Button>
-                                    <DrawerClose asChild>
-                                        <Button variant="outline" className='left-10'>Cancel</Button>
-                                    </DrawerClose>
-                                </DrawerFooter>
+                    <DrawerContent className="h-screen bg-black  text-white">
+                        <div className="flex h-full max-w-full mx-auto w-full px-6 py-10 justify-between gap-10">
+                            {/* Left Side Menu */}
+                            <div className="flex flex-col max-[640px]:flex-1 gap-6 text-2xl font-medium">
+                                <Link
+                                    href="/"
+                                    className={`${pathname === '/' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
+                                >
+                                    Homepage
+                                </Link>
+                                <Link
+                                    href="/portfolio"
+                                    className={`${pathname === '/portfolio' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
+                                >
+                                    Portfolio
+                                </Link>
+                                <Link
+                                    href="/services"
+                                    className={`${pathname === '/services' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
+                                >
+                                    Services
+                                </Link>
+                                <Link
+                                    href="/contact"
+                                    className={`${pathname === '/contact' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'}hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
+                                >
+                                    Contact
+                                </Link>
                             </div>
-                        </DrawerContent>
-                    </div>
+
+                            <div className="">
+                                <h3 className="font-semibold md:block hidden mb-4">Projects</h3>
+                                <ul className="flex flex-col gap-2 text-gray-400 md:block hidden">
+                                    <li><Link href="#">Interior design studio</Link></li>
+                                    <li><Link href="#">Home Security Camera</Link></li>
+                                    <li><Link href="#">Video Gift</Link></li>
+                                    <li><Link href="#">Interviewer</Link></li>
+                                    <li><Link href="#">Causer</Link></li>
+                                    <li><Link href="#">Tony’s Chocolonely</Link></li>
+                                </ul>
+                            </div>
+                            {/* Right Side Links */}
+                            <div className="grid grid-cols-2 gap-10 text-sm">
+                                <div>
+                                    <DrawerFooter className={'p-1'}>
+                                        <DrawerClose asChild className="text-white p-1">
+                                            <button variant="outline" className=' text-black'><IoMdClose size={25} /></button>
+                                        </DrawerClose>
+                                    </DrawerFooter>
+                                </div>
+                            </div>
+                        </div>
+                    </DrawerContent>
+
+
                 </Drawer>
             </div>
         </div>

@@ -8,14 +8,14 @@ const Hero = () => {
     return (
         <>
             <div className='bg-black'>
-                <div className='pt-20'>
-                    <div className="max-w-screen-xl mx-auto px-6 md:px-10 xl:px-0 py-32 md:py-44 flex flex-col lg:flex-row items-start justify-between gap-10">
+                <div className='pt-10'>
+                    <div className="max-w-screen-xl mx-auto px-6 md:px-10 xl:px-0 py-11 md:py-16 xl:py-32 flex flex-col lg:flex-row items-start justify-between gap-10">
                         {/* Text Section */}
                         <div className="flex-1">
                             {/* Heading + Description */}
                             <div className="space-y-14 max-w-2xl mb-14">
-                                <h1 className='text-7xl font-thin leading-snug'>
-                                    <span className='font-medium'>Building</span> <span className='font-thin'>Today for</span> <br />  <span className='font-medium'><span className='font-thin'>Better</span> Tomorrow</span>
+                                <h1 className='md:text-7xl text-5xl max-[590px]:text-3xl font-thin leading-snug'>
+                                    <span className='font-medium'>Building</span> <span className='font-thin'>Today for</span> <span className='md:block hidden'><br /></span>  <span className='font-medium'><span className='font-thin'>Better</span> Tomorrow</span>
                                 </h1>
                                 <p className="text-gray-400 font-normal text-base md:text-lg max-w-xl">
                                     We empower businesses with cost-effective efficient solutions that not only solve today’s challenges but also set the stage for tomorrow’s growth, innovation, and long-term success.

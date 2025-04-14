@@ -11,7 +11,7 @@ const Team = () => {
     return (
         <div className='py-14 overflow-hidden bg-white'>
             <div className='flex lg:flex-row flex-col 2xl:w-8/12 xl:w-10/12  w-full mx-auto px-7 md:px-12 xl:px-20 gap-20'>
-                <div className='w-[40%]'>
+                <div className='lg:w-[40%] w-full'>
                     <div className='space-y-10 pb-10'>
                         <h2 className='text-6xl font-thin leading-snug'><span className='font-medium'>Meet</span> <br /> Our <span className='font-medium'>Team</span></h2>
                         <p className='font-light text-gray-500'>We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.</p>
@@ -30,7 +30,7 @@ const Team = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-between relative w-[60%] h-[750px]'>
+                <div className='flex justify-between relative lg:w-[60%] w-full h-[750px]'>
                     <div className="flex justify-center items-center lg:block hidden overflow-hidden">
                         <motion.svg
 
@@ -109,41 +109,41 @@ const Team = () => {
                             />
                         </motion.svg>
                     </div>
-                    <div className='grid grid-cols-2 gap-6  absolute left-36 top-14'>
+                    <div className='grid grid-cols-2  gap-6  lg:absolute lg:left-36 lg:top-14'>
                         <div className='relative group overflow-hidden'>
                             <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member1} />
                             <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
                             <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
+                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
                                 <span>Syed Shihab</span>
                                 <span>CEO & Founder</span>
+                            </div>
+                        </div>
+                        <div className='relative group overflow-hidden'>
+                            <Image className='w-full h-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member2} />
+                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
+                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
+                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
+                                <span>Syed Shihab</span>
+                                <span>Full-stack developer</span>
                             </div>
                         </div>
                         <div className='relative group overflow-hidden'>
                             <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member2} />
                             <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
                             <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
+                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
                                 <span>Syed Shihab</span>
-                                <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className='relative group overflow-hidden'>
-                            <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member2} />
-                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
-                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
-                                <span>Syed Shihab</span>
-                                <span>CEO & Founder</span>
+                                <span>Full-stack developers</span>
                             </div>
                         </div>
                         <div className='relative group overflow-hidden'>
                             <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member4} />
                             <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
                             <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
+                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
                                 <span>Syed Shihab</span>
-                                <span>CEO & Founder</span>
+                                <span>Full-stack developers</span>
                             </div>
                         </div>
                     </div>
