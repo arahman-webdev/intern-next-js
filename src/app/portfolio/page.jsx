@@ -12,6 +12,7 @@ import project6 from '../images/Projects/video-gift-3.webp'
 import Image from 'next/image';
 import TopTitle from '@/SharedComponents/TopTitle';
 import TopMenu from '@/SharedComponents/TopMenu';
+import Contact from '@/SharedComponents/Contact';
 
 const Portfolio = () => {
     const workRef = useRef(null)
@@ -20,11 +21,11 @@ const Portfolio = () => {
       workRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
     return (
-        <div className='py-10'>
+        <div className='pt-14'>
             <div>
           
             </div>
-            <div>
+            <div className='pb-14'>
                 <TopMenu title='Portfolio' />
                 <div className='lg:w-11/12 xl:w-10/12 2xl:w-4/6 mx-auto  w-full 2xl:px-24 xl:px-16  px-4'>
                 <h1 className='text-6xl font-medium leading-normal mt-5'><span className='font-semibold'>Designing a <br /> Better</span> <span className='font-thin'>World Today</span></h1>
@@ -57,6 +58,7 @@ const Portfolio = () => {
                     </section>
                 </div>
             </div>
+            <Contact title={'CONTACT US'} />
         </div>
     );
 };

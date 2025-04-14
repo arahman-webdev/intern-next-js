@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import TopTitle from '@/SharedComponents/TopTitle';
 import Link from 'next/link';
 import { FaArrowDownLong, FaArrowRight } from 'react-icons/fa6';
+import Contact from '@/SharedComponents/Contact';
 const Services = () => {
     return (
         <div className='bg-black py-14 text-white'>
@@ -166,7 +167,9 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
+              
             </div>
+            <Contact title='CONTACT US' />
         </div>
     );
 };

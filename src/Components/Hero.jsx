@@ -13,23 +13,21 @@ const Hero = () => {
                         {/* Text Section */}
                         <div className="flex-1">
                             {/* Heading + Description */}
-                            <div className="space-y-14 max-w-xl mb-14">
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-thin leading-10">
-                                    <span className="font-semibold">Building</span> Today  for   Better
-                                    <span className="font-semibold">Tomorrow</span>
-                                    <HighlightText className="text-4xl font-semibold" text="Highlight Text" />
+                            <div className="space-y-14 max-w-2xl mb-14">
+                                <h1 className='text-7xl font-thin leading-snug'>
+                                    <span className='font-medium'>Building</span> <span className='font-thin'>Today for</span> <br />  <span className='font-medium'><span className='font-thin'>Better</span> Tomorrow</span>
                                 </h1>
-                                <p className="text-gray-400 font-normal text-base md:text-lg">
+                                <p className="text-gray-400 font-normal text-base md:text-lg max-w-xl">
                                     We empower businesses with cost-effective efficient solutions that not only solve today’s challenges but also set the stage for tomorrow’s growth, innovation, and long-term success.
                                 </p>
                             </div>
 
                             {/* Buttons + Scroll */}
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-items-center sm:justify-between gap-8">
                                 {/* Buttons */}
                                 <div className="flex flex-col sm:flex-row gap-5 items-center">
                                     <Link href="/about">
-                                    <Button title={'WHAT WE DO'} />
+                                        <Button title={'WHAT WE DO'} />
                                     </Link>
                                     <Link href="/about">
                                         <button className="flex items-center gap-4 group text-sm font-medium text-white">
@@ -41,9 +39,32 @@ const Hero = () => {
 
                                 {/* Scroll Button */}
                                 <div className="hidden lg:block">
-                                    <button>
-                                        <a href="#footer"><FaArrowDown className="text-white animate-bounce" /></a>
-                                    </button>
+                                    <div className="flex items-center justify-center">
+                                        <div className="relative w-36 h-36">
+                                            {/* Circular Text with SVG */}
+                                            <svg
+                                                viewBox="0 0 200 200"
+                                                className="w-full h-full  text-gray-50"
+                                            >
+                                                <defs>
+                                                    <path
+                                                        id="circlePath"
+                                                        d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+                                                    />
+                                                </defs>
+                                                <text fontSize="30" fontWeight="thin" className='fill-gray-400'>
+                                                    <textPath href="#circlePath" startOffset="0%">
+                                                        SCROLL DOWN - SCROLL DOWN -
+                                                    </textPath>
+                                                </text>
+                                            </svg>
+
+                                            {/* Center orange ring with arrow */}
+                                            <div className="absolute top-1/2 left-1/2 w-14 h-14 -translate-x-1/2 -translate-y-1/2 rounded-full border-[10px] border-[#FF9800] flex items-center justify-center bg-black z-10">
+                                                <FaArrowDown className="text-amber-500 text-xl" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
