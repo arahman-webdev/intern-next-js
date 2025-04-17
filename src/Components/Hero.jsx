@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <>
 
-            <div className='bg-black pt-20 pb-5'>
+            <div className='bg-black pt-24 pb-6'>
                 <div className='pt-20'>
                     <div className="max-w-7xl w-full mx-auto px-2 md:px-10 xl:px-0 py-11 md:py-16 xl:py-32 flex flex-col lg:flex-row  justify-between gap-10">
                         {/* Text Section */}

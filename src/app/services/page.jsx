@@ -9,7 +9,7 @@ import Contact from '@/SharedComponents/Contact';
 const Services = () => {
     return (
         <div className='bg-black py-14 text-white'>
-            <div>
+            <div className='py-16'>
                 <TopMenu title={'Services'} color='text-white' />
             </div>
             <div className='lg:w-11/12 xl:w-10/12 2xl:w-4/6 mx-auto  w-full 2xl:px-24 xl:px-16  px-4 '>

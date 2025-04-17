@@ -20,7 +20,7 @@ export default function Navbar() {
     <div className="fixed top-0 left-0 w-full z-50">
       <div className="bg-black">
         <div className="flex justify-between items-center px-16 py-8  text-white  mx-auto">
-          <h1 className="text-2xl font-bold cursor-pointer">T2<span className="opacity-95 font-thin">devs</span></h1>
+          <Link href={'/'}><h1 className="text-2xl font-bold cursor-pointer">T2<span className="opacity-95 font-thin">devs</span></h1></Link>
           <button className="text-white z-50 relative w-10 h-10" onClick={() => setOpen(!open)}>
             <MdClose
               size={40}
