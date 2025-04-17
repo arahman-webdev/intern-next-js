@@ -1,107 +1,127 @@
+// components/Navbar.js
+"use client";
 
-
-"use client"
-
-
-
-import { IoMdClose } from "react-icons/io";
-import { HiBars3BottomLeft } from "react-icons/hi2";
-import { Button } from "./ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
 import { useState } from "react";
-
-import Image from "next/image";
+import { HiBars3BottomLeft } from "react-icons/hi2";
+import { MdClose } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaCross } from "react-icons/fa6";
+import logo from '../app/images/logo/T2devs-Logo.png'
+import Image from "next/image";
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
 
-const data = [
-    { goal: 400 }, { goal: 300 }, { goal: 200 },
-    { goal: 300 }, { goal: 200 }, { goal: 278 },
-    { goal: 189 }, { goal: 239 }, { goal: 300 },
-    { goal: 200 }, { goal: 278 }, { goal: 189 },
-    { goal: 349 },
-];
-
-const Navbar = () => {
-
-    const [isOpen, setIsopen] = useState(false)
-    const pathname = usePathname()
-
-    return (
-
-        <div className="bg-black py-12">
-            <div className="w-11/12 mx-auto">
-                <Drawer>
-                    <div className="flex justify-between">
-                        <div>
-                            <h2 className="text-white">Arahman</h2>
-                        </div>
-                        <DrawerTrigger asChild>
-                            <Button variant="outline">{isOpen ? <IoMdClose /> : <HiBars3BottomLeft />}</Button>
-                        </DrawerTrigger>
-                    </div>
-
-                    <DrawerContent className="h-screen bg-black  text-white">
-                        <div className="flex h-full max-w-full mx-auto w-full px-6 py-10 justify-between gap-10">
-                            {/* Left Side Menu */}
-                            <div className="flex flex-col max-[640px]:flex-1 gap-6 text-2xl font-medium">
-                                <Link
-                                    href="/"
-                                    className={`${pathname === '/' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
-                                >
-                                    Homepage
-                                </Link>
-                                <Link
-                                    href="/portfolio"
-                                    className={`${pathname === '/portfolio' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
-                                >
-                                    Portfolio
-                                </Link>
-                                <Link
-                                    href="/services"
-                                    className={`${pathname === '/services' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
-                                >
-                                    Services
-                                </Link>
-                                <Link
-                                    href="/contact"
-                                    className={`${pathname === '/contact' ? 'text-[#FF9800] font-bold' : 'text-gray-300 hover:text-white'}hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300 will-change-transform`}
-                                >
-                                    Contact
-                                </Link>
-                            </div>
-
-                            <div className="">
-                                <h3 className="font-semibold md:block hidden mb-4">Projects</h3>
-                                <ul className="flex flex-col gap-2 text-gray-400 md:block hidden">
-                                    <li><Link href="#">Interior design studio</Link></li>
-                                    <li><Link href="#">Home Security Camera</Link></li>
-                                    <li><Link href="#">Video Gift</Link></li>
-                                    <li><Link href="#">Interviewer</Link></li>
-                                    <li><Link href="#">Causer</Link></li>
-                                    <li><Link href="#">Tony’s Chocolonely</Link></li>
-                                </ul>
-                            </div>
-                            {/* Right Side Links */}
-                            <div className="grid grid-cols-2 gap-10 text-sm">
-                                <div>
-                                    <DrawerFooter className={'p-1'}>
-                                        <DrawerClose asChild className="text-white p-1">
-                                            <button variant="outline" className=' text-black'><IoMdClose size={25} /></button>
-                                        </DrawerClose>
-                                    </DrawerFooter>
-                                </div>
-                            </div>
-                        </div>
-                    </DrawerContent>
-
-
-                </Drawer>
-            </div>
+  return (
+    <div className="fixed top-0 left-0 w-full z-50">
+      <div className="bg-black">
+        <div className="flex justify-between items-center px-16 py-8  text-white  mx-auto">
+          <h1 className="text-2xl font-bold cursor-pointer">T2<span className="opacity-95 font-thin">devs</span></h1>
+          <button className="text-white z-50 relative w-10 h-10" onClick={() => setOpen(!open)}>
+            <MdClose
+              size={40}
+              className={`absolute top-0 left-0 transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0'
+                }`}
+            />
+            <HiBars3BottomLeft
+              size={40}
+              className={`absolute top-0 left-0 transition-opacity duration-300 ${open ? 'opacity-0' : 'opacity-100'
+                }`}
+            />
+          </button>
         </div>
-    );
-};
+      </div>
 
-export default Navbar;
+      {/* Overlay */}
+      <div
+        className={`fixed top-0 right-0 h-full w-full bg-black text-white z-40  ${open ? "" : "translate-x-full"}`}
+      >
+        <div className="flex flex-col lg:flex-row h-full justify-center items-center">
+          {/* Left Side */}
+          <div className="flex-1 p-10 flex flex-col justify-center items-center text-3xl space-y-6 mx-auto">
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className={`${pathname === '/' ? 'text-[#FF9800] font-bold' : 'text-gray-300'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/portfolio"
+              onClick={handleLinkClick}
+              className={`${pathname === '/portfolio' ? 'text-[#FF9800] font-bold' : 'text-gray-300'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300`}
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/services"
+              onClick={handleLinkClick}
+              className="text-gray-300 hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300"
+            >
+              Services
+            </Link>
+            <Link
+              href="/contact"
+              onClick={handleLinkClick}
+              className="text-gray-300 hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300"
+            >
+              Contact
+            </Link>
+          </div>
+
+          <div className="border-r-[1px] h-screen border-gray-900"></div>
+          {/* Right Side with static content */}
+          <div className="flex-1 grid grid-cols-1 p-10 gap-10 lg:block hidden">
+            {/* Projects */}
+
+            <div className="grid grid-cols-2 pb-7">
+              <div>
+                <h3 className="text-white font-semibold text-xl mb-4">Projects</h3>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>Interior design studio</li>
+                  <li>Home Security Camera</li>
+                  <li>Video Gift</li>
+                  <li>Interviewer</li>
+                  <li>Causer</li>
+                  <li>Tony's Chocolonely</li>
+                </ul>
+              </div>
+
+              {/* Useful Links */}
+              <div>
+                <h3 className="text-white font-semibold text-xl mb-4">Useful Links</h3>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>Privacy Policy</li>
+                  <li>Terms and Conditions</li>
+                  <li>Cookie Policy</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+
+            </div>
+            <hr className="border-r border-gray-900" />
+            {/* Contact Locations */}
+            <div className="grid grid-cols-2 pt-7">
+              <div className="col-span-2 md:col-span-1">
+                <h3 className="text-white font-semibold text-xl mb-4">Canada</h3>
+                <p className="text-sm text-gray-400">
+                  71 South Los Carneros Road, California<br />+51 174 705 812
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold text-xl mt-6 mb-2">Germany</h3>
+                <p className="text-sm text-gray-400">
+                  Leehove 40, 2678 MC De Lier, Netherlands<br />+31 174 705 811
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

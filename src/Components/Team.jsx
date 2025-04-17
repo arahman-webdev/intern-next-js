@@ -9,36 +9,46 @@ import member4 from '../app/images/dev-portrait.jpeg'
 import Image from 'next/image';
 const Team = () => {
     return (
-        <div className='py-14 overflow-hidden bg-white'>
-            <div className='flex lg:flex-row flex-col 2xl:w-8/12 xl:w-10/12  w-full mx-auto px-7 md:px-12 xl:px-20 gap-20'>
-                <div className='lg:w-[40%] w-full'>
-                    <div className='space-y-10 pb-10'>
-                        <h2 className='text-6xl font-thin leading-snug'><span className='font-medium'>Meet</span> <br /> Our <span className='font-medium'>Team</span></h2>
-                        <p className='font-light text-gray-500'>We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.</p>
-                        <p className='text-gray-500'>Together, our creative team is committed to delivering impactful work that exceeds expectations.</p>
-                    </div>
-                    <div className='pb-14 pt-4'>
-                        <Button title='Read More' />
-                    </div>
-                    <div className="flex items-center gap-6">
-                        {/* Text Section */}
+        <div className="lg:py-5 py-24 bg-white overflow-hidden">
+            <div className="w-full max-w-7xl mx-auto px-5 md:px-2 lg:px-16 xl:px-20 flex flex-col items-center justify-items-center lg:flex-row gap-16">
 
-                        <div className="max-w-md">
-                            <h6 className="md:text-3xl text-base font-thin  leading-relaxed">
-                                <span className=''>We <span className='font-semibold'>deliver</span>  <br /> <span className="">exceptional</span>  <span className="font-semibold"> results.</span></span>
-                            </h6>
-                        </div>
+                {/* Left Content */}
+                <div className="w-full lg:w-2/5 space-y-10">
+                    <div className="space-y-10">
+                        <h2 className="lg:text-[68px] md:text-5xl text-3xl leading-tight font-semibold">
+                           <span>Meet</span>  <br className='md:block hidden' /> Our Team
+                        </h2>
+                        <p className="text-gray-500 font-light">
+                            We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.
+                        </p>
+                        <p className="text-gray-500">
+                            Together, our creative team is committed to delivering impactful work that exceeds expectations.
+                        </p>
+                    </div>
+
+                    <div className="pt-4">
+                        <Button title="Read More" />
+                    </div>
+
+                    <div className="max-w-md">
+                        <h6 className="text-base md:text-2xl font-thin leading-relaxed">
+                            We <span className="font-semibold">deliver</span> <br className="hidden md:block" />
+                            <span>exceptional</span> <span className="font-semibold">results.</span>
+                        </h6>
                     </div>
                 </div>
-                <div className='flex justify-between relative lg:w-[60%] w-full h-[750px]'>
-                    <div className="flex justify-center items-center lg:block hidden overflow-hidden">
+
+                {/* Right Content */}
+                <div className="w-full lg:w-3/5 relative flex justify-between">
+                    {/* SVG only visible on large screens */}
+                    <div className="flex justify-center items-center lg:block hidden xl:h-[950px] lg:h-[750px] min-[1130px]:h-[900px] min-[1200px]:h-[900px]">
                         <motion.svg
 
                             width="250"
                             viewBox="0 0 300 1404"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="animate-pulse text-gray-300"
+                            className="animate-pulse text-gray-200"
                         >
                             <motion.path
                                 initial={{ y: 0 }}
@@ -109,47 +119,32 @@ const Team = () => {
                             />
                         </motion.svg>
                     </div>
-                    <div className='grid grid-cols-2  gap-6  lg:absolute lg:left-36 lg:top-14'>
-                        <div className='relative group overflow-hidden'>
-                            <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member1} />
-                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
-                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
-                                <span>Syed Shihab</span>
-                                <span>CEO & Founder</span>
+
+                    {/* Grid of Team Members */}
+                    <div className="relative lg:absolute grid grid-cols-1 sm:grid-cols-2 lg:left-24 lg:top-36 gap-6 z-10">
+                        {[member1, member2, member2, member4].map((member, i) => (
+                            <div key={i} className="relative group overflow-hidden rounded-lg shadow-md">
+                                <Image
+                                    src={member}
+                                    alt={`Team Member ${i + 1}`}
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300" />
+                                <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full bg-amber-500 transition-all duration-700" />
+                                <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-300 text-center opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-700">
+                                    <span className="text-lg font-medium">Syed Shihab</span>
+                                    <span className="text-sm">{
+                                        i === 0 ? "CEO & Founder" : "Full-stack Developer"
+                                    }</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className='relative group overflow-hidden'>
-                            <Image className='w-full h-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member2} />
-                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
-                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
-                                <span>Syed Shihab</span>
-                                <span>Full-stack developer</span>
-                            </div>
-                        </div>
-                        <div className='relative group overflow-hidden'>
-                            <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member2} />
-                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
-                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
-                                <span>Syed Shihab</span>
-                                <span>Full-stack developers</span>
-                            </div>
-                        </div>
-                        <div className='relative group overflow-hidden'>
-                            <Image className='w-full object-cover group-hover:scale-105 transition duration-300 overflow-hidden' src={member4} />
-                            <div className='absolute inset-0 group-hover:bg-black group-hover:bg-opacity-60 transition duration-300'></div>
-                            <div className='absolute bottom-0 left-0 w-0 h-1 group-hover:w-full bg-amber-500 transition-all duration-700'></div>
-                            <div className='absolute top-2/4 flex flex-col text-center right-12 text-gray-400 mt-4 opacity-0 translate-y-6 group-hover:opacity-100 max-[992px]:opacity-100 group-hover:translate-y-0 transition-all duration-700'>
-                                <span>Syed Shihab</span>
-                                <span>Full-stack developers</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
+
+
     );
 };
 

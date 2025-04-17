@@ -25,7 +25,7 @@ const Services = () => {
                             viewBox="0 0 300 1404"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="animate-pulse text-gray-300"
+                            className=" text-white opacity-30"
                         >
                             <motion.path
                                 initial={{ y: 0 }}
@@ -102,7 +102,7 @@ const Services = () => {
                                 <h4 className='text-3xl font-normal'><span>Branding and</span> <br className='md:block hidden' /> <span>Identity Design</span></h4>
                                 <p className='opacity-80'><span>Our creative agency is a team of professionals focused on helping your brand grow.</span></p>
                             </div>
-                            <ul className='flex flex-col gap-6'>
+                            <ul className='flex flex-col gap-6 text-[#ffffff99]'>
                                 <li><Link href={'#'}>UX Audits</Link></li>
                                 <li><Link href={'#'}>Design thinking</Link></li>
                                 <li><Link href={'#'}>Methodologies</Link></li>
@@ -119,7 +119,7 @@ const Services = () => {
                                 <h4 className='text-3xl font-normal'><span>Website Design</span> <br className='md:block hidden' /> <span>and Development</span></h4>
                                 <p className='opacity-80'><span>Our creative agency is a team of professionals focused on helping your brand grow.</span></p>
                             </div>
-                            <ul className='flex flex-col gap-6'>
+                            <ul className='flex flex-col gap-6 text-[#ffffff99]'>
                                 <li><Link href={'#'}>UX Audits</Link></li>
                                 <li><Link href={'#'}>Design thinking</Link></li>
                                 <li><Link href={'#'}>Methodologies</Link></li>
@@ -136,7 +136,7 @@ const Services = () => {
                                 <h4 className='text-3xl font-normal'><span>Branding and</span> <br className='md:block hidden' /><span>Identity Design</span></h4>
                                 <p className='opacity-80'><span>Our creative agency is a team of professionals focused on helping your brand grow.</span></p>
                             </div>
-                            <ul className='flex flex-col gap-6'>
+                            <ul className='flex flex-col gap-6 text-[#ffffff99]'>
                                 <li><Link href={'#'}>UX Audits</Link></li>
                                 <li><Link href={'#'}>Design thinking</Link></li>
                                 <li><Link href={'#'}>Methodologies</Link></li>
@@ -153,7 +153,7 @@ const Services = () => {
                                 <h4 className='text-3xl font-normal'><span>Branding and</span> <br className='md:block hidden' /> <span>Identity Design</span></h4>
                                 <p className='opacity-80'><span>Our creative agency is a team of professionals focused on helping your brand grow.</span></p>
                             </div>
-                            <ul className='flex flex-col gap-6'>
+                            <ul className='flex flex-col gap-6 text-[#ffffff99]'>
                                 <li><Link href={'#'}>UX Audits</Link></li>
                                 <li><Link href={'#'}>Design thinking</Link></li>
                                 <li><Link href={'#'}>Methodologies</Link></li>

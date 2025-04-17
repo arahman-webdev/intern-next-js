@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 const About = () => {
     return (
         <div className='py-14 bg-white overflow-hidden'>
-            <div className='flex lg:flex-row flex-col 2xl:w-8/12 xl:w-10/12 w-full mx-auto px-7 md:px-12 xl:px-20 xl:gap-16 gap-7'>
+            <div className='flex lg:flex-row flex-col  max-w-7xl  w-full mx-auto px-3 lg:px-12 xl:px-5 xl:gap-16 gap-7'>
                 {/* Left Column */}
-                <div className='pt-14 lg:w-[45%] w-full'>
-                    <div className='space-y-10 pb-10'>
-                        <h2 className='text-6xl font-thin leading-snug'>
-                            <span className='font-medium'>Building</span> <br /> the <span className='font-medium'>Future</span>
+                <div className='pt-20 lg:w-[40%] w-full'>
+                    <div className='space-y-10 pb-16'>
+                        <h2 className='md:text-6xl text-3xl font-thin leading-snug'>
+                            <span className='font-medium'>Building</span> <br className='md:block hidden' /> the <span className='font-medium'>Future</span>
                         </h2>
                         <p className='font-light text-gray-500'>
                             We are a forward-thinking solutions provider committed to empowering businesses through cost-effective, high-quality technology services. Our mission is to connect global talent with businesses, offering expert services in Web Development, Mobile App development, UX/UI design, Digital Marketing, and more. We believe in delivering scalable, sustainable solutions that not only address today’s challenges but also drive innovation and growth for tomorrow.
@@ -35,7 +35,7 @@ const About = () => {
                         <div className="max-w-md">
                             <h6 className="text-sm md:text-base font-light leading-relaxed">
                                 <span className='font-semibold'>
-                                    Passionately Creating <span className='text-gray-500'>Design Wonders:</span> <br />
+                                    Passionately Creating <span className='text-gray-500'>Design Wonders:</span> <br className='max-[400px]:hidden' />
                                     <span className="font-semibold">Unleashing</span> <span className="font-semibold text-gray-500">Boundless Creativity</span>
                                 </span>
                             </h6>
@@ -44,7 +44,7 @@ const About = () => {
                 </div>
 
                 {/* Right Column: Static Image with animated SVG background */}
-                <div className="relative flex justify-center items-center h-[850px]">
+                <div className="relative flex justify-center items-center  h-[800px] ">
                     {/* Animated SVG pattern */}
 
                     <div className="flex justify-center items-center lg:block hidden overflow-hidden">
@@ -127,14 +127,14 @@ const About = () => {
                     </div>
 
                     {/* Static Image in front */}
-                    <div className="absolute  lg:left-32 top-10 z-10 lg:w-[450px] w-full lg:h-[740px] h-full bg-white">
+                    <div className="relative z-10 mx-auto w-full lg:absolute lg:left-32 lg:top-10 lg:w-[450px] lg:h-[740px] h-full  overflow-hidden">
                         <Image
                             src={about}
                             alt="About Image"
-                            fill
-                            className="object-cover"
+                            className="object-cover w-full h-full"
                         />
                     </div>
+
                 </div>
             </div>
         </div>

@@ -1,23 +1,23 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
-import { HighlightText } from './animate-ui/highlight-text';
 import Button from '@/SharedComponents/Button';
 
 const Hero = () => {
     return (
         <>
-            <div className='bg-black'>
-                <div className='pt-10'>
-                    <div className="max-w-screen-xl mx-auto px-6 md:px-10 xl:px-0 py-11 md:py-16 xl:py-32 flex flex-col lg:flex-row items-start justify-between gap-10">
+
+            <div className='bg-black pt-20 pb-5'>
+                <div className='pt-20'>
+                    <div className="max-w-7xl w-full mx-auto px-2 md:px-10 xl:px-0 py-11 md:py-16 xl:py-32 flex flex-col lg:flex-row  justify-between gap-10">
                         {/* Text Section */}
                         <div className="flex-1">
                             {/* Heading + Description */}
-                            <div className="space-y-14 max-w-2xl mb-14">
-                                <h1 className='md:text-7xl text-5xl max-[590px]:text-3xl font-thin leading-snug'>
-                                    <span className='font-medium'>Building</span> <span className='font-thin'>Today for</span> <span className='md:block hidden'><br /></span>  <span className='font-medium'><span className='font-thin'>Better</span> Tomorrow</span>
+                            <div className="space-y-10  mb-14">
+                                <h1 className='leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl  text-[#ffffffe6] max-w-full'>
+                                    Building <span className='font-thin'>Today for</span> <span><br className='md:block hidden' /> </span> <span className='font-thin'>Better</span> Tomorrow
                                 </h1>
-                                <p className="text-gray-400 font-normal text-base md:text-lg max-w-xl">
+                                <p className="text-[#ffffff66] font-normal text-base md:text-lg max-w-xl">
                                     We empower businesses with cost-effective efficient solutions that not only solve today’s challenges but also set the stage for tomorrow’s growth, innovation, and long-term success.
                                 </p>
                             </div>
@@ -40,11 +40,11 @@ const Hero = () => {
                                 {/* Scroll Button */}
                                 <div className="hidden lg:block">
                                     <div className="flex items-center justify-center">
-                                        <div className="relative w-36 h-36">
+                                        <div className="relative w-32 h-32 group">
                                             {/* Circular Text with SVG */}
                                             <svg
                                                 viewBox="0 0 200 200"
-                                                className="w-full h-full  text-gray-50"
+                                                className="w-full h-full  text-[#ffffff66] "
                                             >
                                                 <defs>
                                                     <path
@@ -52,15 +52,16 @@ const Hero = () => {
                                                         d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
                                                     />
                                                 </defs>
-                                                <text fontSize="30" fontWeight="thin" className='fill-gray-400'>
+                                                <text fontSize="24" fontWeight="thin" className="fill-[#ffffff66] group-hover:fill-[#ffffffe6] transition duration-300 ease-in-out">
                                                     <textPath href="#circlePath" startOffset="0%">
-                                                        SCROLL DOWN - SCROLL DOWN -
+                                                        SCROLL&nbsp;&nbsp;&nbsp;&nbsp;DOWN&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;SCROLL&nbsp;&nbsp;&nbsp;&nbsp;DOWN&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </textPath>
                                                 </text>
+
                                             </svg>
 
                                             {/* Center orange ring with arrow */}
-                                            <div className="absolute top-1/2 left-1/2 w-14 h-14 -translate-x-1/2 -translate-y-1/2 rounded-full border-[10px] border-[#FF9800] flex items-center justify-center bg-black z-10">
+                                            <div className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full border-[12px] border-[#FF9800] flex items-center justify-center bg-black z-10">
                                                 <FaArrowDown className="text-amber-500 text-xl" />
                                             </div>
                                         </div>

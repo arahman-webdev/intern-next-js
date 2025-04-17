@@ -50,9 +50,10 @@ const Services = () => {
     return (
         <div className='py-20 bg-black text-slate-50'>
             {/* Title here from component ---------------------------- */}
+            
             <Title />
             <div className="flex justify-center md:flex-row flex-col items-center ">
-                <span className="mil-text-image rounded-full group px-10 flex items-center"><Image className='rounded-full w-40 object-cover group-hover:scale-110 transition ease-out duration-300' decoding="async" src={bulb} alt="http://idea-thumbnail" /></span>
+                <span className="w-[250px] h-[80px] inline-block overflow-hidden rounded-[70px]  group px-10 flex items-center"><Image className='rounded-full w-full object-top object-cover group-hover:scale-110 transition ease-out duration-300' decoding="async" src={bulb} alt="http://idea-thumbnail" /></span>
                 <h2 className="lg:text-7xl md:text-5xl text-3xl text-center"><span className='font-semibold'>Expert <span className="font-thin">Collaborations</span></span></h2>
             </div>
 
