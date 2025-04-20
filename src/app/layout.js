@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
+import AosAnimtaion from "@/SharedComponents/AosAnimtaion";
+import Spinner from "@/SharedComponents/Spinner";
 
 
 const geistSans = Geist({
@@ -23,9 +25,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='font-outfit'>
+        <Spinner>
         <Navbar />
+        <AosAnimtaion />
         {children}
         <Footer />
+        </Spinner>
       </body>
     </html>
   );

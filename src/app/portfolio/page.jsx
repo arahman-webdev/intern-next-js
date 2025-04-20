@@ -14,38 +14,36 @@ import TopTitle from '@/SharedComponents/TopTitle';
 import TopMenu from '@/SharedComponents/TopMenu';
 import Contact from '@/SharedComponents/Contact';
 
+
 const Portfolio = () => {
     const workRef = useRef(null)
 
     const scrollToWork = () => {
-      workRef.current?.scrollIntoView({ behavior: 'smooth' })
+        workRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
     return (
         <div className='pt-14'>
 
             <div className='pb-14'>
                 <div className='py-16'>
-                <TopMenu title='Portfolio' />
+                    <TopMenu title='Portfolio' />
                 </div>
-                <div className='lg:w-11/12 xl:w-10/12 2xl:w-4/6 mx-auto  w-full 2xl:px-24 xl:px-16  px-4'>
-                <h1 className='text-6xl font-medium leading-normal mt-5'><span className='font-semibold'>Designing a <br /> Better</span> <span className='font-thin'>World Today</span></h1>
-                <TopTitle bgColor='bg-[#E5E5E5]' title={'Our works'} scrollToWork={scrollToWork}  />
+                <div className='lg:w-11/12 xl:w-10/12 2xl:w-4/6 mx-auto  w-full 2xl:px-14 xl:px-16  px-4'>
+                    <h1 className='text-8xl font-medium leading-tight mt-5'><span className='font-semibold'>Designing a <br /> Better</span> <span className='font-thin'>World Today</span></h1>
+                    <TopTitle bgColor='bg-[#E5E5E5]' title={'Our works'} scrollToWork={scrollToWork} />
                     <section ref={workRef}>
-                        <div className='grid lg:grid-cols-2 grid-cols-1 gap-7'>
+                        <div className='grid lg:grid-cols-2 grid-cols-1 items-center gap-7'>
                             {
-                                [project1, project2, project4, project3, project5, project6].map((project, index) => (
-                                    <div className='group p-7 border'>
-                                        <div className='relative overflow-hidden  '>
+                                [project1, project2, project6, project5, project4, project3].map((project, index) => (
+                                    <div className={`group p-7 w-full`}>
+                                        <div className="relative overflow-hidden ">
                                             <Image
                                                 key={index}
                                                 src={project}
                                                 alt={`product-${project}`}
-                                                className={`w-full h-full  transform group-hover:scale-105 transition duration-500 ease-in-out
-                                                ${index === 1? ' h-[500px]': ''}
-                                                    `}
-
+                                                className={`w-full transform group-hover:scale-105 transition duration-500 ease-in-out object-cover
+                                                  ${index === 0 || index === 3 || index === 4 ? 'h-[590px] w-[90%] self-start ' : ''} ${index === 1 || index === 3 || index === 5 ? 'place-self-end' : ''}  `}
                                             />
-
                                         </div>
                                         <div className='flex flex-col space-y-6 mt-6'>
                                             <span><span className='text-amber-500'>Technology</span> November 14, 2023</span>

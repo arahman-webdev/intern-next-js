@@ -6,6 +6,7 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import logo from '../app/images/logo/T2devs-Logo.png'
 import Image from "next/image";
 export default function Navbar() {
@@ -16,10 +17,12 @@ export default function Navbar() {
     setOpen(false);
   };
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <div className="bg-black">
-        <div className="flex justify-between items-center px-16 py-8  text-white  mx-auto">
+        <div className="flex justify-between items-center  py-8 w-11/12 text-white  mx-auto">
           <Link href={'/'}><h1 className="text-2xl font-bold cursor-pointer">T2<span className="opacity-95 font-thin">devs</span></h1></Link>
           <button className="text-white z-50 relative w-10 h-10" onClick={() => setOpen(!open)}>
             <MdClose
@@ -40,7 +43,7 @@ export default function Navbar() {
       <div
         className={`fixed top-0 right-0 h-full w-full bg-black text-white z-40  ${open ? "" : "translate-x-full"}`}
       >
-        <div className="flex flex-col lg:flex-row h-full justify-center items-center">
+        <div className="flex flex-col lg:flex-row h-full justify-center items-center w-11/12 mx-auto">
           {/* Left Side */}
           <div className="flex-1 p-10 flex flex-col justify-center items-center text-3xl space-y-6 mx-auto">
             <Link
@@ -60,10 +63,88 @@ export default function Navbar() {
             <Link
               href="/services"
               onClick={handleLinkClick}
-              className="text-gray-300 hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300"
+              className={`${pathname === '/services' ? 'text-[#FF9800] font-bold' : 'text-gray-300'
+                } hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300`}
             >
-              Services
+              <div className="flex items-center relative group">
+                <span>Services</span>
+
+                {/* Arrow toggle (only this toggles dropdown) */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent navigation
+                    e.stopPropagation(); // Prevent parent link click
+                    setDropdownOpen(!dropdownOpen);
+                  }}
+                  className="ml-2"
+                >
+                  {dropdownOpen ? <FiChevronUp /> : <FiChevronDown />}
+                </button>
+
+                {/* Dropdown */}
+                {dropdownOpen && (
+                  <div className="absolute left-0 top-10 text-base bg-black border border-gray-700 rounded-md p-4 z-50 w-max text-gray-300 space-y-2">
+                    <Link
+                      href="/services/service-1"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Outsourcing Experts and Resources
+                    </Link>
+                    <Link
+                      href="/services/web-development"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Website Design and Development
+                    </Link>
+                    <Link
+                      href="/services/mobile-app"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Mobile App Development
+                    </Link>
+                    <Link
+                      href="/services/wordpress"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      WordPress Development
+                    </Link>
+                    <Link
+                      href="/services/ui-ux"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      UX/UI Design
+                    </Link>
+                    <Link
+                      href="/services/seo"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Digital Marketing and SEO
+                    </Link>
+                    <Link
+                      href="/services/content"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Content Writing
+                    </Link>
+                    <Link
+                      href="/services/consultancy"
+                      onClick={handleLinkClick}
+                      className="block hover:text-[#FF9800] transition"
+                    >
+                      Business Consultancy Support
+                    </Link>
+                  </div>
+                )}
+              </div>
             </Link>
+
             <Link
               href="/contact"
               onClick={handleLinkClick}
@@ -78,8 +159,8 @@ export default function Navbar() {
           <div className="flex-1 grid grid-cols-1 p-10 gap-10 lg:block hidden">
             {/* Projects */}
 
-            <div className="grid grid-cols-2 pb-7">
-              <div>
+            <div className="grid grid-cols-2 pb-7" data-aos="zoom-in-up" data-aos-duration="3000">
+              <div data-aos="zoom-in-up">
                 <h3 className="text-white font-semibold text-xl mb-4">Projects</h3>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>Interior design studio</li>

@@ -13,18 +13,18 @@ const About = () => {
                 {/* Left Column */}
                 <div className='pt-20 lg:w-[40%] w-full'>
                     <div className='space-y-10 pb-16'>
-                        <h2 className='md:text-6xl text-3xl font-thin leading-snug'>
+                        <h2 className='md:text-6xl text-3xl font-thin leading-snug' data-aos="fade-up">
                             <span className='font-medium'>Building</span> <br className='md:block hidden' /> the <span className='font-medium'>Future</span>
                         </h2>
-                        <p className='font-light text-gray-500'>
+                        <p className='font-light text-gray-500' data-aos="fade-up">
                             We are a forward-thinking solutions provider committed to empowering businesses through cost-effective, high-quality technology services. Our mission is to connect global talent with businesses, offering expert services in Web Development, Mobile App development, UX/UI design, Digital Marketing, and more. We believe in delivering scalable, sustainable solutions that not only address today’s challenges but also drive innovation and growth for tomorrow.
                         </p>
-                        <p className='text-gray-500'>
+                        <p className='text-gray-500' data-aos="fade-up">
                             To become a leading partner for businesses worldwide, providing exceptional IT outsourcing solutions that fuel success and innovation, all while maintaining a focus on quality, affordability, and long-term impact.
                         </p>
                     </div>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-6" data-aos="fade-up">
                         {/* Owner Image with Play Icon */}
                         <div className="relative sm:w-24 sm:h-24 w-20 h-20 rounded-full">
                             <Image src={owner} alt="owner" className="w-full h-full object-cover rounded-full" />
@@ -44,7 +44,7 @@ const About = () => {
                 </div>
 
                 {/* Right Column: Static Image with animated SVG background */}
-                <div className="relative flex justify-center items-center  h-[800px] ">
+                <div className="relative flex justify-center items-center  h-[800px] " data-aos="fade-up">
                     {/* Animated SVG pattern */}
 
                     <div className="flex justify-center items-center lg:block hidden overflow-hidden">

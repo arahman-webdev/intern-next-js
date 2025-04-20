@@ -62,7 +62,7 @@ export function Clients() {
             </div>
 
             <div className="text-center pb-14">
-                <h2 className="text-6xl font-medium leading-normal">Customer <span className="font-thin">Voices:</span> <br /><span>Hear What</span> <span className="font-thin">They Say!</span></h2>
+                <h2 className="lg:text-6xl text-4xl font-medium leading-normal">Customer <span className="font-thin">Voices:</span> <br /><span>Hear What</span> <span className="font-thin">They Say!</span></h2>
             </div>
 
             <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -76,11 +76,14 @@ export function Clients() {
                             ${index === activeIndex ? "border-amber-500" : "border-transparent"}
                             ${index === 1 ? "translate-y-4" : ""}`} // ✅ lower the middle one
                         >
-                            <Image
-                                src={review?.image}
-                                alt={review.name}
-                                className="rounded-full w-20 h-20"
-                            />
+                            <div className="w-24 h-24 rounded-full bg-[#f0f0f0]  overflow-hidden">
+                                <Image
+                                    src={review.image}
+                                    alt={review.name}
+
+                                    className="rounded-full  object-cover"
+                                />
+                            </div>
                         </button>
                     ))}
                 </div>
@@ -113,7 +116,7 @@ export function Clients() {
             <div className="pt-20">
                 <Marquee pauseOnHover={true} className="flex gap-5">
                     <div className="flex flex-wrap justify-center items-center gap-6 py-10">
-                        {[product1, product3, product4, product5,  product7, product8, product9].map((product, index) => (
+                        {[product1, product3, product4, product5, product7, product8, product9].map((product, index) => (
                             <Image
                                 key={index}
                                 src={product}

@@ -4,9 +4,9 @@ import React from 'react';
 
 const TopMenu = ({title, color}) => {
     return (
-        <div>
+        <div className='w-3/6 '>
             <ul className="flex justify-center gap-2">
-                <li className="relative pl-4 font-semibold text-sm uppercase before:content-[''] before:absolute before:right-14 before:top-1/2 before:translate-y-[-50%] before:w-[100vw] before:h-[1px] before:bg-black/10">
+                <li className="relative pl-4 font-semibold text-sm uppercase before:content-[''] before:absolute before:right-14 before:top-1/2 before:translate-y-[-50%] before:w-[100vw] before:h-[1px] before:bg-slate-500">
                     <Link href="/" className={`${color}`}>Home</Link>
                 </li>
 
