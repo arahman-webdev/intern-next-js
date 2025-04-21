@@ -4,6 +4,7 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import AosAnimtaion from "@/SharedComponents/AosAnimtaion";
 import Spinner from "@/SharedComponents/Spinner";
+import Progressbar from "@/SharedComponents/Progressbar";
 
 
 const geistSans = Geist({
@@ -24,10 +25,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='font-outfit'>
+      <body className='font-outfit overflow-y-scroll snap-none'>
         <Spinner>
         <Navbar />
         <AosAnimtaion />
+        <Progressbar />
         {children}
         <Footer />
         </Spinner>

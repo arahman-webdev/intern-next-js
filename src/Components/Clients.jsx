@@ -57,17 +57,17 @@ export function Clients() {
 
     return (
         <div className="bg-[#F2F2F2] py-16 px-4">
-            <div>
+            <div data-aos="fade-right">
                 <Title />
             </div>
 
-            <div className="text-center pb-14">
+            <div className="text-center pb-14" data-aos="fade-up">
                 <h2 className="lg:text-6xl text-4xl font-medium leading-normal">Customer <span className="font-thin">Voices:</span> <br /><span>Hear What</span> <span className="font-thin">They Say!</span></h2>
             </div>
 
             <div className="max-w-3xl mx-auto text-center space-y-6">
                 {/* Avatar Section */}
-                <div className="flex justify-center sm:gap-4 gap-2 mb-6">
+                <div className="flex justify-center sm:gap-4 gap-2 mb-6" data-aos="fade-up">
                     {reviews.map((review, index) => (
                         <button
                             key={index}

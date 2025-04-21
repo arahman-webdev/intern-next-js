@@ -5,7 +5,7 @@ import about from '../app/images/discover-hero-1.webp';
 import Image from 'next/image';
 import { CgPlayPause } from "react-icons/cg";
 import { motion } from "framer-motion";
-import 'animate.css';
+
 const About = () => {
     return (
         <div className='py-14 bg-white overflow-hidden'>
@@ -13,18 +13,18 @@ const About = () => {
                 {/* Left Column */}
                 <div className='pt-20 lg:w-[40%] w-full'>
                     <div className='space-y-10 pb-16'>
-                        <h2 className='md:text-6xl text-3xl font-thin leading-snug animate__animated animate__fadeIn' >
+                        <h2 className='md:text-6xl text-3xl font-thin leading-snug' data-aos="fade-up">
                             <span className='font-medium'>Building</span> <br className='md:block hidden' /> the <span className='font-medium'>Future</span>
                         </h2>
-                        <p className='font-light text-gray-500 animate__animated animate__fadeIn'>
+                        <p className='font-light text-gray-500' data-aos="fade-up">
                             We are a forward-thinking solutions provider committed to empowering businesses through cost-effective, high-quality technology services. Our mission is to connect global talent with businesses, offering expert services in Web Development, Mobile App development, UX/UI design, Digital Marketing, and more. We believe in delivering scalable, sustainable solutions that not only address today’s challenges but also drive innovation and growth for tomorrow.
                         </p>
-                        <p className='text-gray-500 animate__animated animate__fadeIn' >
+                        <p className='text-gray-500' data-aos="fade-up">
                             To become a leading partner for businesses worldwide, providing exceptional IT outsourcing solutions that fuel success and innovation, all while maintaining a focus on quality, affordability, and long-term impact.
                         </p>
                     </div>
 
-                    <div className="flex items-center gap-6 animate__animated animate__fadeIn" >
+                    <div className="flex items-center gap-6" data-aos="fade-up">
                         {/* Owner Image with Play Icon */}
                         <div className='max-[400px]:flex-1'>
                             <div className="relative  w-20 h-20 bg-[#f0f0f0] rounded-full">

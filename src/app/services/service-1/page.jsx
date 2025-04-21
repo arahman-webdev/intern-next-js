@@ -1,6 +1,7 @@
 'use client'
 
 
+import Button from '@/SharedComponents/Button';
 import TopTitle from '@/SharedComponents/TopTitle';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
@@ -128,7 +129,7 @@ const Service_1 = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-black  py-20 '>
+            <div className='bg-black  pt-20 '>
                 <div className='max-w-7xl mx-auto  w-full 2xl:px-12 xl:px-16 px-4'>
                     <div className='text-white text-center space-y-6'>
                         <h2 className='text-[68px] font-medium text-white text-center'>Reasonable <span className='font-thin'>prices</span> <span><br /></span> for innovative <span className='font-thin'>solutions</span></h2>
@@ -153,6 +154,78 @@ const Service_1 = () => {
                                 </button>
                             </div>
                         </div>
+                        <div className='flex lg:flex-row flex-col lg:items-center lg:gap-3 gap-6 border-b border-t border-[#ffffff1a] group py-10 cursor-pointer'>
+                            <div className='w-[16%]'>
+                                <span className='text-[#FFFFFFE6]'>$</span>
+                                <span className='text-[#FF9800] text-[54px] font-medium'>49</span>
+                            </div>
+                            <div className='text-[#FFFFFFE6] w-[34%] text-xl font-medium'>
+                                <span>Tailored Designs for <br />
+                                    Every Budget</span>
+                            </div>
+                            <div className='w-[34%]'>
+                                <p className='text-[#FFFFFF66]'><span>Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</span></p>
+                            </div>
+                            <div className='w-[16%] flex lg:justify-end '>
+                                <button className='flex gap-5 items-center '>
+                                    <FaArrowRightLong className="bg-[#FF9800] p-3 rounded-full size-10 group-hover:scale-125 transition duration-300" />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='flex lg:flex-row flex-col lg:items-center lg:gap-3 gap-6 border-b border-t border-[#ffffff1a] group py-10 cursor-pointer'>
+                            <div className='w-[16%]'>
+                                <span className='text-[#FFFFFFE6]'>$</span>
+                                <span className='text-[#FF9800] text-[54px] font-medium'>59</span>
+                            </div>
+                            <div className='text-[#FFFFFFE6] w-[34%] text-xl font-medium'>
+                                <span>Tailored Designs for <br />
+                                    Every Budget</span>
+                            </div>
+                            <div className='w-[34%]'>
+                                <p className='text-[#FFFFFF66]'><span>Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</span></p>
+                            </div>
+                            <div className='w-[16%] flex lg:justify-end '>
+                                <button className='flex gap-5 items-center '>
+                                    <FaArrowRightLong className="bg-[#FF9800] p-3 rounded-full size-10 group-hover:scale-125 transition duration-300" />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='flex lg:flex-row flex-col lg:items-center lg:gap-3 gap-6 border-b border-t border-[#ffffff1a] group py-10 cursor-pointer'>
+                            <div className='w-[16%]'>
+                                <span className='text-[#FFFFFFE6]'>$</span>
+                                <span className='text-[#FF9800] text-[54px] font-medium'>89</span>
+                            </div>
+                            <div className='text-[#FFFFFFE6] w-[34%] text-xl font-medium'>
+                                <span>Tailored Designs for <br />
+                                    Every Budget</span>
+                            </div>
+                            <div className='w-[34%]'>
+                                <p className='text-[#FFFFFF66]'><span>Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</span></p>
+                            </div>
+                            <div className='w-[16%] flex lg:justify-end '>
+                                <button className='flex gap-5 items-center '>
+                                    <FaArrowRightLong className="bg-[#FF9800] p-3 rounded-full size-10 group-hover:scale-125 transition duration-300" />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='flex justify-center pt-14'>
+                            <Link href="/">
+                                <Button title={'individual solution'} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div className='max-w-7xl mx-auto  w-full 2xl:px-12 xl:px-16 px-4'>
+                    <div className='flex justify-between items-center'>
+                        <h3 className='text-[42px] font-medium'>Other services</h3>
+                        <button className='flex gap-5 items-center group'>
+                            <span className=''>VIEW ALL</span>
+                            <FaArrowRightLong className="bg-[#E5E5E5] p-3 rounded-full size-10 group-hover:scale-125 transition duration-300" />
+                        </button>
                     </div>
                 </div>
             </div>

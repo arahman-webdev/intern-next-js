@@ -15,23 +15,23 @@ const Team = () => {
                 {/* Left Content */}
                 <div className="w-full lg:w-2/5 space-y-10">
                     <div className="space-y-10">
-                        <h2 className="lg:text-[68px] md:text-5xl text-3xl leading-tight font-semibold">
+                        <h2 data-aos="fade-up" className="lg:text-[68px] md:text-5xl text-3xl leading-tight font-semibold">
                            <span>Meet</span>  <br className='md:block hidden' /> Our Team
                         </h2>
-                        <p className="text-gray-500 font-light">
+                        <p data-aos="fade-up" className="text-gray-500 font-light">
                             We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.
                         </p>
-                        <p className="text-gray-500">
+                        <p data-aos="fade-up" className="text-gray-500">
                             Together, our creative team is committed to delivering impactful work that exceeds expectations.
                         </p>
                     </div>
 
-                    <div className="pt-4">
+                    <div data-aos="fade-up" className="pt-4">
                         <Button title="Read More" />
                     </div>
 
                     <div className="max-w-md">
-                        <h6 className="text-base md:text-2xl font-thin leading-relaxed">
+                        <h6 data-aos="fade-up" className="text-base md:text-2xl font-thin leading-relaxed">
                             We <span className="font-semibold">deliver</span> <br className="hidden md:block" />
                             <span>exceptional</span> <span className="font-semibold">results.</span>
                         </h6>
@@ -41,7 +41,7 @@ const Team = () => {
                 {/* Right Content */}
                 <div className="w-full lg:w-3/5 relative flex justify-between">
                     {/* SVG only visible on large screens */}
-                    <div className="flex justify-center items-center lg:block hidden xl:h-[950px] lg:h-[750px] min-[1130px]:h-[900px] min-[1200px]:h-[900px]">
+                    <div data-aos="fade-up" className="flex justify-center items-center lg:block hidden xl:h-[950px] lg:h-[750px] min-[1130px]:h-[900px] min-[1200px]:h-[900px]">
                         <motion.svg
 
                             width="250"
@@ -121,7 +121,7 @@ const Team = () => {
                     </div>
 
                     {/* Grid of Team Members */}
-                    <div className="relative lg:absolute grid grid-cols-1 sm:grid-cols-2 lg:left-24 lg:top-36 gap-6 z-10">
+                    <div className="relative lg:absolute grid grid-cols-1 sm:grid-cols-2 lg:left-24 lg:top-36 gap-6 z-10" data-aos="fade-up">
                         {[member1, member2, member2, member4].map((member, i) => (
                             <div key={i} className="relative group overflow-hidden rounded-lg shadow-md">
                                 <Image

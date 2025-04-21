@@ -7,6 +7,7 @@ import About from "@/Components/About";
 import Services from "@/Components/Services";
 import Team from "@/Components/Team";
 import { Clients } from "@/Components/Clients";
+import Progressbar from '@/SharedComponents/Progressbar';
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <div>
+      <Progressbar />
       <div className='bg-black text-slate-50 '>
         <Hero />
       </div>

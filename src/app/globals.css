@@ -6,8 +6,17 @@
 @tailwind utilities;
 
 
-html{
+html,
+body {
   scroll-behavior: smooth;
+}
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
 }
 
 @layer base {

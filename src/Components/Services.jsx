@@ -51,15 +51,15 @@ const Services = () => {
         <div className='py-20 bg-black text-slate-50'>
             {/* Title here from component ---------------------------- */}
             
-            <Title />
+            <Title data-aos="fade-right" />
             <div className="flex justify-center md:flex-row flex-col items-center ">
-                <span className="w-[290px] h-[70px] inline-block overflow-hidden rounded-full  group px-10 mr-5"><Image className='rounded-full  w-full h-auto object-top object-cover group-hover:scale-110 transition ease-out duration-300' decoding="async" src={bulb} alt="http://idea-thumbnail" /></span>
-                <h2 className="lg:text-7xl md:text-5xl text-3xl text-center"><span className='font-semibold'>Expert <span className="font-thin">Collaborations</span></span></h2>
+                <span data-aos="fade-right" className="w-[290px] h-[70px] inline-block overflow-hidden rounded-full  group px-10 mr-5"><Image className='rounded-full  w-full h-auto object-top object-cover group-hover:scale-110 transition ease-out duration-300' decoding="async" src={bulb} alt="http://idea-thumbnail" /></span>
+                <h2 className="lg:text-7xl md:text-5xl text-3xl text-center" data-aos="fade-up" ><span className='font-semibold'>Expert <span className="font-thin">Collaborations</span></span></h2>
             </div>
 
             <div className="flex justify-center md:flex-row flex-col items-center gap-7 py-5">
-                <h2 className='lg:text-7xl md:text-5xl text-3xl'><span className='font-semibold'>For Your <span class="font-thin">Business.</span></span></h2>
-                <button className="uppercase bg-[#FF9800] hover:bg-[#FFA700] transition ease-in duration-150 py-4 pl-10 pr-5 rounded-full flex items-center justify-between gap-8 group text-sm tracking-wide font-semibold text-black">
+                <h2 data-aos="fade-up" className='lg:text-7xl md:text-5xl text-3xl'><span className='font-semibold'>For Your <span class="font-thin">Business.</span></span></h2>
+                <button data-aos="fade-left" className="uppercase bg-[#FF9800] hover:bg-[#FFA700] transition ease-in duration-150 py-4 pl-10 pr-5 rounded-full flex items-center justify-between gap-8 group text-sm tracking-wide font-semibold text-black">
                     What We Do
                     <FaArrowRight className="bg-black group-hover:scale-125 transition duration-300 text-[#FF9800] p-2 rounded-full w-9 h-9" />
                 </button>
@@ -72,7 +72,7 @@ const Services = () => {
                 <div className='grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1'>
                     {
                         services.map((service, index) => <>
-                            <div key={index} className='relative group text-white bg-black p-7 overflow-hidden border border-gray-800'>
+                            <div data-aos="fade-up" key={index} className='relative group text-white bg-black p-7 overflow-hidden border border-gray-800'>
                                 <div className='absolute top-0 left-0 h-1 bg-amber-500 w-0 group-hover:w-full transition-all duration-1000'></div>
 
                                 <div className='space-y-8 pb-4'>

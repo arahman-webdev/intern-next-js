@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1  md:grid-cols-4 gap-14">
 
                     {/* Column 1 - Logo + Newsletter */}
-                    <div className="flex flex-col gap-6 md:col-span-2">
+                    <div className="flex flex-col gap-6 md:col-span-2" data-aos="fade-up">
                         <div className="space-y-4 flex flex-col">
                             <span className=" text-3xl text-white font-semibold">T2<span className='opacity-75 text-2xl'>devs</span> </span>
                             <span className="text-sm">Subscribe our newsletter:</span>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 2 - Navigation */}
-                    <div className="flex flex-col col-span-1 gap-4  text-white text-2xl">
+                    <div className="flex flex-col col-span-1 gap-4  text-white text-2xl" data-aos="fade-up">
                         <Link href="/" className={`${pathname === '/' ? 'text-[#FF9800] font-bold' : 'text-gray-300'} hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300`}>
                             Home
                         </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 3 - Policies */}
-                    <div className="flex flex-col col-span-1 gap-4 text-base opacity-80">
+                    <div className="flex flex-col col-span-1 gap-4 text-base opacity-80" data-aos="fade-up">
                         <Link href="/" className="hover:text-[#FF9800] hover:translate-x-2 transition-all duration-300">
                             Privacy Policy
                         </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
 
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-14 pt-20'>
-                    <div className='md:col-span-2 '>
+                    <div className='md:col-span-2 ' data-aos="fade-up">
                         <div className='flex gap-4'>
                             <i className='text-xl text-white'><FaGithub className='' /></i>
                             <i className='text-xl text-white'><FaLinkedin className='' /></i>
@@ -80,7 +80,7 @@ const Footer = () => {
                             <p>© 2025 T2devs. All Rights Reserved.</p>
                         </div>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='col-span-1' data-aos="fade-up">
                         <div className=''>
                             <h1 className='text-[#E6E6E6] text-xl font-medium'>USA</h1>
                         </div>
@@ -89,10 +89,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='col-span-1'>
-                        <div className=''>
+                        <div className='' data-aos="fade-up">
                             <h1 className='text-[#E6E6E6] text-xl font-medium '>Bangladesh</h1>
                         </div>
-                        <div className='text-[#ffffff66] py-5'>
+                        <div className='text-[#ffffff66] py-5' data-aos="fade-up">
                             <p>Sherpur, Bogura, Bangladesh</p>
                         </div>
                     </div>

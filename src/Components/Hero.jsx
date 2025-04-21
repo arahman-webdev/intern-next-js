@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FaArrowDown, FaArrowRight } from "react-icons/fa6"
 import Button from '@/SharedComponents/Button'
 import DodecahedronBackground from './DodecahedronBackground '
-import 'animate.css';
+
 const Hero = () => {
     return (
         <>
@@ -16,15 +16,13 @@ const Hero = () => {
                         <div className="flex-1">
                             {/* Heading + Description */}
                             <div className="space-y-10  mb-14">
-                                <h1 data-aos="fade-up" className='leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl  text-[#ffffffe6] max-w-full'>
+                                <h1 data-aos="fade-up" data-aos-duration="1000" className='leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl  text-[#ffffffe6] max-w-full'>
                                     Building <span className='font-thin'>Today for</span> <span><br className='md:block hidden' /> </span> <span className='font-thin'>Better</span> Tomorrow
                                 </h1>
-                                <p className="text-[#ffffff66] font-normal text-base md:text-lg max-w-xl">
+                                <p  className="text-[#ffffff66] font-normal text-base md:text-lg max-w-xl" data-aos="fade-up" data-aos-duration="1500">
                                     We empower businesses with cost-effective efficient solutions that not only solve today’s challenges but also set the stage for tomorrow’s growth, innovation, and long-term success.
                                 </p>
-                                <h1 className="text-4xl font-bold animate__animated animate__bounce">
-                                    Hello, Next.js + Animate.css!
-                                </h1>
+
                             </div>
 
                             {/* Buttons + Scroll */}

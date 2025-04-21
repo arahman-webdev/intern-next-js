@@ -19,7 +19,7 @@ const Spinner = ({ children }) => {
             <div className="flex flex-col items-center justify-center h-screen bg-black">
                 <div className='flex  flex-row justify-center items-center text-slate-50'>
                     <WritingText
-                        className="text-4xl"
+                        className="md:text-4xl text-2xl"
                         text="Building Today for Tomorrow"
                         spacing={9}
                     />
