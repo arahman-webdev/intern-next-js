@@ -26,9 +26,11 @@ const About = () => {
 
                     <div className="flex items-center gap-6" data-aos="fade-up">
                         {/* Owner Image with Play Icon */}
-                        <div className="relative sm:w-24 sm:h-24 w-20 h-20 rounded-full">
-                            <Image src={owner} alt="owner" className="w-full h-full object-cover rounded-full" />
-                            <CgPlayPause className="absolute -bottom-1 -right-1 bg-[#FF9800] p-2 size-10 rounded-full shadow-md" />
+                        <div className='max-[400px]:flex-1'>
+                            <div className="relative  w-20 h-20 bg-[#f0f0f0] rounded-full">
+                                <Image src={owner} alt="owner" className="w-20 h-20 object-cover rounded-full" />
+                                <CgPlayPause className="absolute -bottom-1 -right-1 bg-[#FF9800] p-2 size-10 rounded-full shadow-md" />
+                            </div>
                         </div>
 
                         {/* Caption Text */}

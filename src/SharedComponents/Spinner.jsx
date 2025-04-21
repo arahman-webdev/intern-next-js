@@ -16,13 +16,15 @@ const Spinner = ({ children }) => {
 
     if (loading) return (
         <div>
-            <div className="flex flex-col items-center justify-center h-screen bg-slate-50">
-                <div className='flex  flex-row justify-center items-center'>
+            <div className="flex flex-col items-center justify-center h-screen bg-black">
+                <div className='flex  flex-row justify-center items-center text-slate-50'>
                     <WritingText
                         className="text-4xl"
                         text="Building Today for Tomorrow"
                         spacing={9}
                     />
+
+         
                     
                 </div>
             </div>

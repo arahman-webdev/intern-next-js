@@ -67,16 +67,16 @@ export function Clients() {
 
             <div className="max-w-3xl mx-auto text-center space-y-6">
                 {/* Avatar Section */}
-                <div className="flex justify-center gap-4 mb-6">
+                <div className="flex justify-center sm:gap-4 gap-2 mb-6">
                     {reviews.map((review, index) => (
                         <button
                             key={index}
                             onClick={() => handleAvatarClick(index)}
                             className={`rounded-full p-2 border-4 transition-all duration-300 
                             ${index === activeIndex ? "border-amber-500" : "border-transparent"}
-                            ${index === 1 ? "translate-y-4" : ""}`} // ✅ lower the middle one
+                            ${index === 1 ? "sm:translate-y-4" : ""}`} // lower the middle one
                         >
-                            <div className="w-24 h-24 rounded-full bg-[#f0f0f0]  overflow-hidden">
+                            <div className="sm:w-24 sm:h-24 w-16 h-16 rounded-full bg-[#f0f0f0]  overflow-hidden">
                                 <Image
                                     src={review.image}
                                     alt={review.name}
